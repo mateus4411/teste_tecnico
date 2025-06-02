@@ -36,3 +36,17 @@ python app.py
   "weekday_Sunday": 0
 }
 
+#exemplo de requisicção
+curl -X POST http://127.0.0.1:5000/prevê \
+   -H "Content-Type: application/json" \
+   -d '{
+         "order_month": 6,
+         "weekday": "Monday",
+         "order_value_avg": 150,
+         "total_gasto_cliente": 500,
+         "total_pedidos_cliente": 5,
+         "diff_days": 10,
+         "freq_media_dias_cliente": 15,
+         "num_categorias_cliente": 5
+       }'
+
